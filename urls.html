@@ -1,797 +1,408 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pilz‑Chronik – Linkverzeichnis</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilz-Chronik | Linkverzeichnis</title>
+    <style>
+        /* --- Grundlegende Stile --- */
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfc;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
 
-  <style>
-    /* Grundlegende Stile für die Seite */
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f8f9fa; /* Leicht grauer Hintergrund */
-      color: #343a40; /* Dunkelgrauer Text für besseren Kontrast */
-      line-height: 1.6;
-      margin: 0;
-      padding: 2rem; /* Abstand zum Rand */
-    }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
 
-    /* Zentrierter Container für den Hauptinhalt */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      background-color: #ffffff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-    
-    h1 {
-        font-weight: 600;
-        border-bottom: 1px solid #e9ecef;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
-    }
+        /* --- Kopfbereich --- */
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
 
-    p {
-        color: #6c757d; /* Etwas hellerer Text für Absätze */
-        margin-bottom: 2rem;
-    }
+        .header h1 {
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            font-size: 2.5em;
+            font-weight: 300;
+            color: #2c3e50;
+            margin: 0;
+        }
 
-    /* Wrapper für die Tabelle, um horizontales Scrollen zu ermöglichen */
-    .table-wrap {
-      overflow-x: auto;
-      border: 1px solid #dee2e6;
-      border-radius: 8px;
-    }
-    
-    /* Modernes Tabellen-Design */
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      min-width: 900px;
-      font-size: 0.9rem;
-    }
+        .header .subtitle {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        
+        /* --- Navigation --- */
+        .navigation {
+            width: 100%;
+            background-color: #f8f8f8;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
 
-    th, td {
-      padding: 12px 16px;
-      vertical-align: top;
-      text-align: left;
-      /* Nur horizontale Linien für ein sauberes Aussehen */
-      border-bottom: 1px solid #dee2e6;
-    }
+        .navigation ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-    /* Kopfzeile der Tabelle */
-    th {
-      background-color: #f8f9fa;
-      position: sticky;
-      top: 0;
-      font-weight: 600;
-      color: #495057;
-      border-top: none; /* Keine obere Linie für die Kopfzeile */
-    }
+        .navigation li {
+            margin: 0 15px;
+        }
 
-    /* Entfernt die untere Linie der letzten Zeile */
-    tr:last-child td {
-      border-bottom: none;
-    }
+        .navigation a {
+            display: block;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #8B4513; /* Akzentfarbe */
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s, color 0.3s;
+        }
 
-    /* Links */
-    a {
-      color: #007bff; /* Klassisches Blau für Links */
-      word-break: break-all;
-      text-decoration: none;
-      transition: color 0.2s ease-in-out;
-    }
+        .navigation a:hover {
+            color: #2c3e50;
+            border-bottom-color: #2c3e50;
+        }
+        
+        .navigation .active a {
+            color: #2c3e50;
+            border-bottom-color: #8B4513;
+            cursor: default;
+        }
 
-    a:hover {
-      color: #0056b3;
-      text-decoration: underline;
-    }
-    
-    strong {
-        font-weight: 600;
-    }
-  </style>
+
+        /* --- Inhalt & Sektionen --- */
+        .content-section {
+            background-color: #ffffff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        h2 {
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            font-size: 1.5em;
+            color: #8B4513;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+        
+        /* Stile für die URL-Tabelle (Beispiel) */
+        .url-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .url-table th, .url-table td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+        }
+        .url-table th {
+            font-weight: 600;
+        }
+        .url-table a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+        .url-table a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* --- Fußzeile --- */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
 </head>
-
 <body>
-  <div class="container">
-    <h1>Pilz‑Chronik – Linkverzeichnis</h1>
-    <p>„Gefundene URL“ = Kurzlinks/Angaben. „Vollständige Ziel‑URL“ = Link mit <strong>Domain‑Name</strong> als Ankertext.</p>
-    
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Band</th>
-            <th>Seite</th>
-            <th>Kontext / Link-Text</th>
-            <th>Gefundene URL / E-Mail</th>
-            <th>Vollständige Ziel-URL</th>
-            <th>Inhalt der Zielseite</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>5</td>
-            <td>Impressum</td>
-            <td><a href="mailto:pilz@gmx.at">pilz@gmx.at</a></td>
-            <td>mailto:pilz@gmx.at</td>
-            <td>E-Mail-Adresse des Autors</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>15</td>
-            <td>Zentrale Anlaufstelle</td>
-            <td><a href="https://zlipflow.github.io/pilzchronik/">https://zlipflow.github.io/pilzchronik/</a></td>
-            <td><a href="https://zlipflow.github.io/pilzchronik/">zlipflow.github.io</a></td>
-            <td>Begleitwebseite zur Chronik</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>16</td>
-            <td>Zenodo-Familienarchiv</td>
-            <td><a href="https://doi.org/10.5281/zenodo.15828594">https://doi.org/10.5281/zenodo.15828594</a></td>
-            <td><a href="https://zenodo.org/records/15828594">zenodo.org</a></td>
-            <td>Zenodo-Archiv</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>73</td>
-            <td>Fußnote 7</td>
-            <td><a href="https://bit.ly/4ackzC3">https://bit.ly/4ackzC3</a></td>
-            <td><a href="https://books.google.at/books?redir_esc=y&hl=de&id=OOD0AAAAMAAJ&q=pilz#v=snippet&q=pilz&f=false">books.google.at</a></td>
-            <td>Buch: Encyclopädie der gesammten musikalischen Wissenschaften</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>75</td>
-            <td>Kirchenbuch Leitmeritz</td>
-            <td><a href="https://bit.ly/faugust">https://bit.ly/faugust</a></td>
-            <td><a href="https://vademecum.soalitomerice.cz/vademecum/permalink?xid=09ddd7cea03b9b8d:4e496e4e:12216bae987:-747e&scan=4efc5f91034a44d1ac50afc8e8eed735">vademecum.soalitomerice.cz</a></td>
-            <td>Originaleintrag Taufe August Friedrich Pilz</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>91</td>
-            <td>Fußnote 9</td>
-            <td><a href="https://bit.ly/3PGtFNW">https://bit.ly/3PGtFNW</a></td>
-            <td><a href="https://drive.google.com/file/d/10M1CXZaet3WLb7xonSvEdDJWKH6mBN7-/view?usp=sharing">drive.google.com</a></td>
-            <td>PDF: Ahnenliste Eberstaller (Adler 1953)</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>97</td>
-            <td>Verweis auf Tagebuch</td>
-            <td><a href="https://bit.ly/TAGEbuch">https://bit.ly/TAGEbuch</a></td>
-            <td><a href="https://sites.google.com/d/14h2Dj-fE3gkh_mwjM2cQyf2UWrhRLQSf/p/1ubsocuUXl5fEKcMf_BgaJlbEG2SL955V/edit">sites.google.com</a></td>
-            <td>Link zum Digitalisat des Tagebuchs (Google Sites)</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>139</td>
-            <td>Brasilianische Nationalbibliothek</td>
-            <td><a href="https://bit.ly/4a45JO7">https://bit.ly/4a45JO7</a></td>
-            <td><a href="https://memoria.bn.gov.br/DocReader/DocReader.aspx?bib=030015_05&pesq="Leia Bruckner"&pasta=ano 193&hf=memoria.bn.gov.br&pagfis=81325">memoria.bn.gov.br</a></td>
-            <td>Artikel Karoline Eberstaller</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>141</td>
-            <td>Zeitungsfund Kupferberg 1</td>
-            <td><a href="https://tinyurl.com/Kupferberg1">https://tinyurl.com/Kupferberg1</a></td>
-            <td><a href="https://anno.onb.ac.at/cgi-content/anno?aid=vtl&datum=18710323&seite=5">anno.onb.ac.at</a></td>
-            <td>ANNO: Das Vaterland 23.03.1871</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>141</td>
-            <td>Zeitungsfund Kupferberg 2</td>
-            <td><a href="https://tinyurl.com/Kupferberg2">https://tinyurl.com/Kupferberg2</a></td>
-            <td><a href="https://anno.onb.ac.at/cgi-content/anno?aid=vtl&datum=18720906&seite=4">anno.onb.ac.at</a></td>
-            <td>ANNO: Das Vaterland 06.09.1872</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>142</td>
-            <td>Raufhandel</td>
-            <td><a href="https://bit.ly/463cRHx">https://bit.ly/463cRHx</a></td>
-            <td><a href="https://anno.onb.ac.at/cgi-content/anno?aid=sch&datum=18870521&query="Franz"+"Eberstaller"+"Kadanka"&ref=anno-search&seite=3">anno.onb.ac.at</a></td>
-            <td>Artikel über Franz Eberstaller Kadanka 21.05.1887</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>145</td>
-            <td>Grässlicher Unglücksfall</td>
-            <td><a href="https://tinyurl.com/Helfenberg1">https://tinyurl.com/Helfenberg1</a></td>
-            <td><a href="https://anno.onb.ac.at/cgi-content/anno?aid=mvn&datum=19250306&seite=3">anno.onb.ac.at</a></td>
-            <td>Mühlviertler Nachrichten 06.03.1925</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>145</td>
-            <td>Ein unglücklicher Zufall</td>
-            <td><a href="https://tinyurl.com/Helfenberg2">https://tinyurl.com/Helfenberg2</a></td>
-            <td><a href="https://anno.onb.ac.at/cgi-content/anno?aid=sch&datum=19250306&seite=3">anno.onb.ac.at</a></td>
-            <td>Salzburger Chronik 06.03.1925</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>146</td>
-            <td>Nachruf Leonhard Reider</td>
-            <td><a href="http://bit.ly/4aiVENr">http://bit.ly/4aiVENr</a></td>
-            <td><a href="https://digital.tessmann.it/tessmannDigital/Zeitungsarchiv/Seite/Zeitung/63023/1/09.11.1928/386414/9/filterId-63023%01386414%014713618-query-Reider-filterIssueDate--filterF_type-.html">digital.tessmann.it</a></td>
-            <td>Lienzer Nachrichten 09.11.1928</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>146</td>
-            <td>Dackel entlaufen</td>
-            <td><a href="https://tinyurl.com/Dackelentlaufen">https://tinyurl.com/Dackelentlaufen</a></td>
-            <td><a href="https://anno.onb.ac.at/cgi-content/anno?aid=mvn&datum=19130426&seite=8">anno.onb.ac.at</a></td>
-            <td>ANNO: Mühlviertler Nachrichten 26.04.1913</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>146</td>
-            <td>Jagdglück Helfenberg</td>
-            <td><a href="https://tinyurl.com/Helfenberg3">https://tinyurl.com/Helfenberg3</a></td>
-            <td><a href="https://anno.onb.ac.at/cgi-content/anno?aid=mvn&datum=19130726&seite=4">anno.onb.ac.at</a></td>
-            <td>ANNO: Mühlviertler Nachrichten 26.07.2013</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>147</td>
-            <td>Ebermanns Mundwasser</td>
-            <td><a href="https://tinyurl.com/slawonien">https://tinyurl.com/slawonien</a></td>
-            <td><a href="https://anno.onb.ac.at/cgi-content/anno?aid=pab&datum=18930103&seite=6">anno.onb.ac.at</a></td>
-            <td>Prager Abendblatt 03.01.1893</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>148</td>
-            <td>Radfahrerwildling</td>
-            <td><a href="https://tinyurl.com/Radfahrerwildling">https://tinyurl.com/Radfahrerwildling</a></td>
-            <td><a href="https://anno.onb.ac.at/anno-suche/simple?query="mit einem Fahrrade in sausendem Tempo"">anno.onb.ac.at</a></td>
-            <td>ANNO: Tagblatt 07.07.1925</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>159</td>
-            <td>Petition der Abdecker</td>
-            <td><a href="https://bit.ly/Abdecker">https://bit.ly/Abdecker</a></td>
-            <td><a href="https://wasbishergeschah.at/artikel/Artikel_Arbeit/Abdecker.html">wasbishergeschah.at</a></td>
-            <td>Artikel: Abdecker: Ihre Arbeit der Tod der Dank die Ausgrenzung</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>5</td>
-            <td>Impressum</td>
-            <td><a href="mailto:pilz@gmx.at">pilz@gmx.at</a></td>
-            <td>mailto:pilz@gmx.at</td>
-            <td>E-Mail-Adresse des Autors</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>104</td>
-            <td>Taufeintrag Bechinie</td>
-            <td><a href="https://bit.ly/Bechinie-Taufe">https://bit.ly/Bechinie-Taufe</a></td>
-            <td><a href="https://ebadatelna.soapraha.cz/d/6850/60">ebadatelna.soapraha.cz</a></td>
-            <td>Digitalisat Taufregister Amschelberg</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>172</td>
-            <td>FamilySearch Verlassenschaft</td>
-            <td><a href="https://familysearch.me/3EEHHhb">https://familysearch.me/3EEHHhb</a></td>
-            <td><a href="https://familysearch.org/ark:/61903/3:1:33S7-L1X7-HX1?cc=1929847&wc=MY4B-ZJM:1047408501">familysearch.org</a></td>
-            <td>FamilySearch Webseite (Verlassenschaft Eberstaller 1672)</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>176</td>
-            <td>Heirat Philipp Bechinie</td>
-            <td><a href="https://bit.ly/4fjmnKm">https://bit.ly/4fjmnKm</a></td>
-            <td><a href="https://ebadatelna.soapraha.cz/d/5876/167">ebadatelna.soapraha.cz</a></td>
-            <td>Digitalisat Trauungsregister Chlum</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>180</td>
-            <td>Digitales Familienarchiv</td>
-            <td><a href="https://doi.org/10.5281/zenodo.15828594">https://doi.org/10.5281/zenodo.15828594</a></td>
-            <td><a href="https://zenodo.org/records/15828594">zenodo.org</a></td>
-            <td>Zenodo-Archiv )</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>180</td>
-            <td>Internet Archive</td>
-            <td>archive.org</td>
-            <td><a href="https://archive.org">archive.org</a></td>
-            <td>Web-Archiv zur Langzeitsicherung von Webseiten</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>181</td>
-            <td>Matricula</td>
-            <td><a href="https://www.icar-us.eu/cooperation/online-portals/Matricula/">https://www.icar-us.eu/cooperation/online-portals/Matricula/</a></td>
-            <td><a href="https://www.icar-us.eu/cooperation/online-portals/Matricula/">icar-us.eu</a></td>
-            <td>Portal für Kirchenbücher </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>181</td>
-            <td>Archion</td>
-            <td><a href="https://www.archion.de">https://www.archion.de</a></td>
-            <td><a href="https://www.archion.de">archion.de</a></td>
-            <td>Portal für evangelische Kirchenbücher</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>181</td>
-            <td>Archiv Königgrätz</td>
-            <td><a href="https://aron.vychodoceskearchivy.cz/">https://aron.vychodoceskearchivy.cz/</a></td>
-            <td><a href="https://aron.vychodoceskearchivy.cz/">aron.vychodoceskearchivy.cz</a></td>
-            <td>Tschechisches Staatsarchiv Königgrätz</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>181</td>
-            <td>Archiv Leitmeritz</td>
-            <td><a href="http://matriky.soalitomerice.cz/">http://matriky.soalitomerice.cz/</a></td>
-            <td><a href="http://matriky.soalitomerice.cz/">matriky.soalitomerice.cz</a></td>
-            <td>Tschechisches Staatsarchiv Leitmeritz</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>181</td>
-            <td>Archiv Pilsen</td>
-            <td><a href="http://www.portafontium.eu/">http://www.portafontium.eu/</a></td>
-            <td><a href="http://www.portafontium.eu/">portafontium.eu</a></td>
-            <td>Tschechisch-bayerisches Archivportal Pilsen</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>181</td>
-            <td>Archiv Prag</td>
-            <td><a href="https://ebadatelna.soapraha.cz">https://ebadatelna.soapraha.cz</a></td>
-            <td><a href="https://ebadatelna.soapraha.cz">ebadatelna.soapraha.cz</a></td>
-            <td>Tschechisches Staatsarchiv Prag</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>182</td>
-            <td>Archiv Wittingau</td>
-            <td><a href="http://digi.ceskearchivy.cz/">http://digi.ceskearchivy.cz/</a></td>
-            <td><a href="http://digi.ceskearchivy.cz/">digi.ceskearchivy.cz</a></td>
-            <td>Tschechisches Staatsarchiv Wittingau</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>182</td>
-            <td>Archiv Zamrsk</td>
-            <td><a href="http://vychodoceskearchivy.cz/zamrsk/matriky">http://vychodoceskearchivy.cz/zamrsk/matriky</a></td>
-            <td><a href="http://vychodoceskearchivy.cz/zamrsk/matriky">vychodoceskearchivy.cz</a></td>
-            <td>Tschechisches Staatsarchiv Zamrsk</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>182</td>
-            <td>Matriken Tirol</td>
-            <td><a href="https://matriken.tirol.gv.at/">https://matriken.tirol.gv.at/</a></td>
-            <td><a href="https://matriken.tirol.gv.at/">matriken.tirol.gv.at</a></td>
-            <td>Tiroler Landesarchiv </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>182</td>
-            <td>Matriken Salzburg</td>
-            <td><a href="https://data.matricula-online.eu/de/oesterreich/salzburg/">https://data.matricula-online.eu/de/oesterreich/salzburg/</a></td>
-            <td><a href="https://data.matricula-online.eu/de/oesterreich/salzburg/">data.matricula-online.eu</a></td>
-            <td>Matricula Online für Salzburg</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>182</td>
-            <td>Matriken Oberösterreich</td>
-            <td><a href="https://data.matricula-online.eu/de/oesterreich/oberoesterreich/">https://data.matricula-online.eu/de/oesterreich/oberoesterreich/</a></td>
-            <td><a href="https://data.matricula-online.eu/de/oesterreich/oberoesterreich/">data.matricula-online.eu</a></td>
-            <td>Matricula Online für Oberösterreich</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>182</td>
-            <td>Matriken Graz-Seckau</td>
-            <td><a href="http://data.matricula-online.eu/de/oesterreich/graz-seckau/">http://data.matricula-online.eu/de/oesterreich/graz-seckau/</a></td>
-            <td><a href="http://data.matricula-online.eu/de/oesterreich/graz-seckau/">data.matricula-online.eu</a></td>
-            <td>Matricula Online für die Steiermark</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>182</td>
-            <td>Kirchenbücher Südtirol</td>
-            <td><a href="https://data.matricula-online.eu/de/italien/bozen-brixen/Suedtirol_01/">https://data.matricula-online.eu/de/italien/bozen-brixen/Suedtirol_01/</a></td>
-            <td><a href="https://data.matricula-online.eu/de/italien/bozen-brixen/Suedtirol_01/">data.matricula-online.eu</a></td>
-            <td>Diözesanarchiv Bozen-Brixen </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>183</td>
-            <td>FamilySearch Südtirol</td>
-            <td><a href="https://www.familysearch.org/search/catalog">https://www.familysearch.org/search/catalog</a></td>
-            <td><a href="https://www.familysearch.org/search/catalog">familysearch.org</a></td>
-            <td>Katalog der genealogischen Datenbank FamilySearch</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>183</td>
-            <td>Archiv Dresden</td>
-            <td><a href="https://www.evlks.de/service/landeskirchliches-archiv/">https://www.evlks.de/service/landeskirchliches-archiv/</a></td>
-            <td><a href="https://www.evlks.de/service/landeskirchliches-archiv/">evlks.de</a></td>
-            <td>Landeskirchliches Archiv Dresden</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>183</td>
-            <td>Monasterium</td>
-            <td><a href="http://www.monasterium.net/">http://www.monasterium.net/</a></td>
-            <td><a href="http://www.monasterium.net/">monasterium.net</a></td>
-            <td>Virtuelles Urkundenarchiv</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>183</td>
-            <td>Topothek</td>
-            <td><a href="https://www.topothek.at/">https://www.topothek.at/</a></td>
-            <td><a href="https://www.topothek.at/">topothek.at</a></td>
-            <td>Lokales Online-Archiv für historisches Material</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>183</td>
-            <td>Toledot.org</td>
-            <td><a href="http://www.toledot.org/">http://www.toledot.org/</a></td>
-            <td><a href="http://www.toledot.org/">toledot.org</a></td>
-            <td>Zentrum für jüdische Archivrecherchen</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>184</td>
-            <td>Nationalarchiv Tschechien</td>
-            <td><a href="https://www.nacr.cz/verejnost/badatelna/digitalni-badatelna">https://www.nacr.cz/verejnost/badatelna/digitalni-badatelna</a></td>
-            <td><a href="https://www.nacr.cz/verejnost/badatelna/digitalni-badatelna">nacr.cz</a></td>
-            <td>Digitales Archiv des tschechischen Nationalarchivs</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>184</td>
-            <td>Porta Fontium</td>
-            <td><a href="https://www.portafontium.eu/?language=de">https://www.portafontium.eu/?language=de</a></td>
-            <td><a href="https://www.portafontium.eu/?language=de">portafontium.eu</a></td>
-            <td>Bayerisch-tschechisches Netzwerk digitaler Geschichtsquellen</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>184</td>
-            <td>Historische Karten Tirol</td>
-            <td><a href="https://hik.tirol.gv.at">https://hik.tirol.gv.at</a></td>
-            <td><a href="https://hik.tirol.gv.at">hik.tirol.gv.at</a></td>
-            <td>Portal für historische Karten Tirols</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>184</td>
-            <td>Historische Karten Tschechien</td>
-            <td><a href="https://mapy.cz/">https://mapy.cz/</a></td>
-            <td><a href="https://mapy.cz/">mapy.cz</a></td>
-            <td>Kartenportal für Tschechien</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>184</td>
-            <td>Maps Arcanum</td>
-            <td><a href="https://mapire.eu/en/">https://mapire.eu/en/</a></td>
-            <td><a href="https://mapire.eu/en/">mapire.eu</a></td>
-            <td>Historische Karten Zentraleuropa</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>185</td>
-            <td>DORIS Oberösterreich</td>
-            <td><a href="https://bit.ly/3RK0dZM">https://bit.ly/3RK0dZM</a></td>
-            <td><a href="https://wo.doris.at/weboffice/synserver?project=weboffice&client=core&user=guest&view=hh">wo.doris.at</a></td>
-            <td>Digitales OÖ Raum-Informations-System (WebOffice)</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>185</td>
-            <td>myHeritage</td>
-            <td><a href="https://www.myheritage.de/">https://www.myheritage.de/</a></td>
-            <td><a href="https://www.myheritage.de/">myheritage.de</a></td>
-            <td>Kommerzielle genealogische Datenbank</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>185</td>
-            <td>Ancestry</td>
-            <td><a href="https://www.ancestry.de/">https://www.ancestry.de/</a></td>
-            <td><a href="https://www.ancestry.de/">ancestry.de</a></td>
-            <td>Kommerzielle genealogische Datenbank</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>185</td>
-            <td>FamilySearch</td>
-            <td><a href="https://www.familysearch.org/">https://www.familysearch.org/</a></td>
-            <td><a href="https://www.familysearch.org/">familysearch.org</a></td>
-            <td>Genealogische Datenbank der Mormonen</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>185</td>
-            <td>GenTeam</td>
-            <td><a href="https://www.genteam.at">https://www.genteam.at</a></td>
-            <td><a href="https://www.genteam.at">genteam.at</a></td>
-            <td>Genealogische Datenbank</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>185</td>
-            <td>GedBas</td>
-            <td><a href="https://gedbas.genealogy.net/">https://gedbas.genealogy.net/</a></td>
-            <td><a href="https://gedbas.genealogy.net/">gedbas.genealogy.net</a></td>
-            <td>Genealogische Datenbank von CompGen</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>186</td>
-            <td>CompGen</td>
-            <td><a href="https://www.compgen.de/">https://www.compgen.de/</a></td>
-            <td><a href="https://www.compgen.de/">compgen.de</a></td>
-            <td>Verein für Computergenealogie e.V.</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>186</td>
-            <td>Genealogie Netz</td>
-            <td><a href="http://www.genealogienetz.de/">http://www.genealogienetz.de/</a></td>
-            <td><a href="http://www.genealogienetz.de/">genealogienetz.de</a></td>
-            <td>Portal des Vereins für Computergenealogie e.V.</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>186</td>
-            <td>Familia Austria</td>
-            <td><a href="https://www.familia-austria.at/">https://www.familia-austria.at/</a></td>
-            <td><a href="https://www.familia-austria.at/">familia-austria.at</a></td>
-            <td>Verein für Ahnenforschung</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>186</td>
-            <td>ANNO</td>
-            <td><a href="https://anno.onb.ac.at/">https://anno.onb.ac.at/</a></td>
-            <td><a href="https://anno.onb.ac.at/">anno.onb.ac.at</a></td>
-            <td>Historische Zeitungen der Österr. Nationalbibliothek</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>186</td>
-            <td>Teßmann digital</td>
-            <td><a href="https://www.tessmann.it/de/home.html">https://www.tessmann.it/de/home.html</a></td>
-            <td><a href="https://www.tessmann.it/de/home.html">tessmann.it</a></td>
-            <td>Südtiroler Landesbibliothek</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>186</td>
-            <td>Kramerius</td>
-            <td><a href="https://kramerius.nkp.cz/">https://kramerius.nkp.cz/</a></td>
-            <td><a href="https://kramerius.nkp.cz/">kramerius.nkp.cz</a></td>
-            <td>Nationalbibliothek Tschechien</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>187</td>
-            <td>JewishGen</td>
-            <td><a href="https://www.jewishgen.org/">https://www.jewishgen.org/</a></td>
-            <td><a href="https://www.jewishgen.org/">jewishgen.org</a></td>
-            <td>Plattform für jüdische Genealogie</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>187</td>
-            <td>Geni-Projekt</td>
-            <td><a href="https://www.geni.com/projects/Jewish-Families-from-Prague/7995">https://www.geni.com/projects/Jewish-Families-from-Prague/7995</a></td>
-            <td><a href="https://www.geni.com/projects/Jewish-Families-from-Prague/7995">geni.com</a></td>
-            <td>Genealogisches Projekt "Jewish Families from Prague"</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>187</td>
-            <td>Internetseite zum Buch</td>
-            <td><a href="https://sites.google.com/view/pilzchronik/start">https://sites.google.com/view/pilzchronik/start</a></td>
-            <td><a href="https://sites.google.com/view/pilzchronik/start">sites.google.com</a></td>
-            <td>Begleitwebseite zur Chronik</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>188</td>
-            <td>Ort: Waldhäuser</td>
-            <td><a href="https://maps.app.goo.gl/fCkaAWXZ3nLh96E9A">https://maps.app.goo.gl/fCkaAWXZ3nLh96E9A</a></td>
-            <td><a href="https://maps.app.goo.gl/fCkaAWXZ3nLh96E9A">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>188</td>
-            <td>Ort: Schloss Aigen</td>
-            <td><a href="https://maps.app.goo.gl/DiaaBEJNMpbT1BjC8">https://maps.app.goo.gl/DiaaBEJNMpbT1BjC8</a></td>
-            <td><a href="https://maps.app.goo.gl/DiaaBEJNMpbT1BjC8">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>188</td>
-            <td>Ort: Kainisch</td>
-            <td><a href="https://maps.app.goo.gl/EV5cMPRdQe9oeYVXA">https://maps.app.goo.gl/EV5cMPRdQe9oeYVXA</a></td>
-            <td><a href="https://maps.app.goo.gl/EV5cMPRdQe9oeYVXA">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>188</td>
-            <td>Ort: Bad Ischl</td>
-            <td><a href="https://maps.app.goo.gl/xPbMSRakChPU3eKf7">https://maps.app.goo.gl/xPbMSRakChPU3eKf7</a></td>
-            <td><a href="https://maps.app.goo.gl/xPbMSRakChPU3eKf7">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>188</td>
-            <td>Ort: Krenglbach</td>
-            <td><a href="https://maps.app.goo.gl/eJeRamekGbYnW7ZEA">https://maps.app.goo.gl/eJeRamekGbYnW7ZEA</a></td>
-            <td><a href="https://maps.app.goo.gl/eJeRamekGbYnW7ZEA">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>188</td>
-            <td>Ort: Petererhof</td>
-            <td><a href="https://maps.app.goo.gl/AFGcj3UFVuQpyU9q8">https://maps.app.goo.gl/AFGcj3UFVuQpyU9q8</a></td>
-            <td><a href="https://maps.app.goo.gl/AFGcj3UFVuQpyU9q8">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>188</td>
-            <td>Ort: Rott</td>
-            <td><a href="https://maps.app.goo.gl/jpx6bJJRjSp4227H9">https://maps.app.goo.gl/jpx6bJJRjSp4227H9</a></td>
-            <td><a href="https://maps.app.goo.gl/jpx6bJJRjSp4227H9">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>189</td>
-            <td>Ort: Olbernhau</td>
-            <td><a href="https://maps.app.goo.gl/ziF2tVeKLcAFZznq7">https://maps.app.goo.gl/ziF2tVeKLcAFZznq7</a></td>
-            <td><a href="https://maps.app.goo.gl/ziF2tVeKLcAFZznq7">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>189</td>
-            <td>Ort: Blumenau</td>
-            <td><a href="https://maps.app.goo.gl/W5HzLm9L28jy8QAU6">https://maps.app.goo.gl/W5HzLm9L28jy8QAU6</a></td>
-            <td><a href="https://maps.app.goo.gl/W5HzLm9L28jy8QAU6">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>189</td>
-            <td>Ort: Niederneuschönberg</td>
-            <td><a href="https://maps.app.goo.gl/DDBm9KHRo15nq9NJA">https://maps.app.goo.gl/DDBm9KHRo15nq9NJA</a></td>
-            <td><a href="https://maps.app.goo.gl/DDBm9KHRo15nq9NJA">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>189</td>
-            <td>Ort: Grünthal</td>
-            <td><a href="https://maps.app.goo.gl/Y6YaLLNbj4ju6UGQA">https://maps.app.goo.gl/Y6YaLLNbj4ju6UGQA</a></td>
-            <td><a href="https://maps.app.goo.gl/Y6YaLLNbj4ju6UGQA">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>189</td>
-            <td>Ort: Dörnthal</td>
-            <td><a href="https://maps.app.goo.gl/FGhLD3EPCXBa8fsy8">https://maps.app.goo.gl/FGhLD3EPCXBa8fsy8</a></td>
-            <td><a href="https://maps.app.goo.gl/FGhLD3EPCXBa8fsy8">maps.app.goo.gl</a></td>
-            <td>Google Maps Link</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>189</td>
-            <td>Karte: Rothenhaus</td>
-            <td><a href="https://bit.ly/4fSZduY">https://bit.ly/4fSZduY</a></td>
-            <td><a href="https://maps.arcanum.com/en/map/firstsurvey-bohemia/?layers=141&bbox=1489816.42842852%2C6534069.065167114%2C1504043.2703180984%2C6539257.22846197">maps.arcanum.com</a></td>
-            <td>Historische Karte Rothenhaus (Arcanum)</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>189</td>
-            <td>Karte: Kallich</td>
-            <td><a href="https://bit.ly/3AHHnwn">https://bit.ly/3AHHnwn</a></td>
-            <td><a href="https://maps.arcanum.com/de/map/firstsurvey-bohemia/?layers=141&bbox=1468470.5815351685%2C6543321.173811231%2C1496924.2653143252%2C6553697.500400944">maps.arcanum.com</a></td>
-            <td>Historische Karte Kallich (Arcanum)</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>189</td>
-            <td>Karte: Schmiedeberg</td>
-            <td><a href="https://bit.ly/3ZhJYGC">https://bit.ly/3ZhJYGC</a></td>
-            <td><a href="https://maps.arcanum.com/de/map/firstsurvey-bohemia/?layers=osm%2C141&bbox=1445671.6567497356%2C6519835.961017222%2C1459898.498639314%2C6525024.124312078">maps.arcanum.com</a></td>
-            <td>Historische Karte Schmiedeberg (Arcanum)</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>190</td>
-            <td>Karte: Weipert</td>
-            <td><a href="https://bit.ly/4fYGfTT">https://bit.ly/4fYGfTT</a></td>
-            <td><a href="https://maps.arcanum.com/de/map/firstsurvey-bohemia/?layers=141&bbox=1446497.9646065556%2C6530467.831409333%2C1453611.385551345%2C6533061.913056761">maps.arcanum.com</a></td>
-            <td>Historische Karte Weipert (Arcanum)</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>190</td>
-            <td>Karte: Gottesgab</td>
-            <td><a href="https://bit.ly/3CDCPYp">https://bit.ly/3CDCPYp</a></td>
-            <td><a href="https://maps.arcanum.com/de/map/firstsurvey-bohemia/?layers=osm%2C141&bbox=1420522.0169836103%2C6516013.745949181%2C1448975.700762767%2C6526390.072538894">maps.arcanum.com</a></td>
-            <td>Historische Karte Gottesgab (Arcanum)</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>190</td>
-            <td>Karte: Kupferberg</td>
-            <td><a href="https://bit.ly/3UZMQW4">https://bit.ly/3UZMQW4</a></td>
-            <td><a href="https://maps.arcanum.com/de/map/firstsurvey-bohemia/?layers=osm%2C141&bbox=1453930.2129265417%2C6517095.079965256%2C1468157.05481612%2C6522283.243260112">maps.arcanum.com</a></td>
-            <td>Historische Karte Kupferberg (Arcanum)</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>190</td>
-            <td>Karte: Libeschitz</td>
-            <td><a href="https://bit.ly/3Z3Deuu">https://bit.ly/3Z3Deuu</a></td>
-            <td><a href="https://maps.arcanum.com/de/map/firstsurvey-bohemia/?layers=osm%2C141&bbox=1509115.4141514006%2C6494857.886762588%2C1523342.256040979%2C6500046.050057444">maps.arcanum.com</a></td>
-            <td>Historische Karte Libeschitz (Arcanum)</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>190</td>
-            <td>Karte: Hlaváčov</td>
-            <td><a href="https://bit.ly/3YZzpqn">https://bit.ly/3YZzpqn</a></td>
-            <td><a href="https://maps.arcanum.com/de/map/firstsurvey-bohemia/?layers=osm%2C141&bbox=1640536.6216254844%2C6431209.996370013%2C1647650.0425702739%2C6433804.078017441">maps.arcanum.com</a></td>
-            <td>Historische Karte Hlaváčov (Arcanum)</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>190</td>
-            <td>Karte: Amschelberg</td>
-            <td><a href="https://bit.ly/3CFU8YK">https://bit.ly/3CFU8YK</a></td>
-            <td><a href="https://maps.arcanum.com/de/map/firstsurvey-bohemia/?layers=osm%2C141&bbox=1604997.3691489003%2C6384502.183862386%2C1619224.2110384787%2C6389690.347157242">maps.arcanum.com</a></td>
-            <td>Historische Karte Amschelberg (Arcanum)</td>
-          </tr>
-        </tbody>
-      </table>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>Pilz-Chronik</h1>
+            <p class="subtitle">Digitales Archiv &amp; Ergänzungen</p>
+        </header>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li class="active"><a href="urls.html">Linkverzeichnis</a></li>
+                <!-- Hier weitere Links einfügen -->
+            </ul>
+        </nav>
+
+        <main>
+            <section class="content-section">
+                <h2>Vollständiges Linkverzeichnis</h2>
+                <p>
+                    Hier finden Sie eine vollständige und geprüfte Liste aller externen Links, die in Band 1 und Band 2 der Chronik verwendet werden. Diese Liste wird regelmäßig gewartet, um sicherzustellen, dass alle Quellen erreichbar bleiben.
+                </p>
+                
+                <<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilz-Chronik | Linkverzeichnis</title>
+    <style>
+        /* --- Grundlegende Stile --- */
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fdfdfc;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* --- Kopfbereich --- */
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            font-size: 2.5em;
+            font-weight: 300;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        
+        /* --- Navigation --- */
+        .navigation {
+            width: 100%;
+            background-color: #f8f8f8;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+
+        .navigation ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navigation li {
+            margin: 0 15px;
+        }
+
+        .navigation a {
+            display: block;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #8B4513; /* Akzentfarbe */
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        .navigation a:hover {
+            color: #2c3e50;
+            border-bottom-color: #2c3e50;
+        }
+        
+        .navigation .active a {
+            color: #2c3e50;
+            border-bottom-color: #8B4513;
+            cursor: default;
+        }
+
+
+        /* --- Inhalt & Sektionen --- */
+        .content-section {
+            background-color: #ffffff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        h2 {
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            font-size: 1.5em;
+            color: #8B4513;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+        
+        /* Stile für die URL-Tabelle (Beispiel) */
+        .url-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .url-table th, .url-table td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+        }
+        .url-table th {
+            font-weight: 600;
+        }
+        .url-table a {
+            color: #8B4513;
+            text-decoration: none;
+        }
+        .url-table a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* --- Fußzeile --- */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>Pilz-Chronik</h1>
+            <p class="subtitle">Digitales Archiv &amp; Ergänzungen</p>
+        </header>
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li class="active"><a href="urls.html">Linkverzeichnis</a></li>
+                <!-- Hier weitere Links einfügen -->
+            </ul>
+        </nav>
+
+        <main>
+            <section class="content-section">
+                <h2>Vollständiges Linkverzeichnis</h2>
+                <p>
+                    Hier finden Sie eine vollständige und geprüfte Liste aller externen Links, die in Band 1 und Band 2 der Chronik verwendet werden. Diese Liste wird regelmäßig gewartet, um sicherzustellen, dass alle Quellen erreichbar bleiben.
+                </p>
+                
+                <!-- Hier kann die eigentliche Liste oder Tabelle der URLs eingefügt werden -->
+                <table class="url-table">
+                    <thead>
+                        <tr>
+                            <th>Kapitel/Seite</th>
+                            <th>Beschreibung</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Band 1, S. 25</td>
+                            <td>Archiv Amschelberg, Taufregister</td>
+                            <td><a href="#" target="_blank" rel="noopener noreferrer">Link zum Archiv</a></td>
+                        </tr>
+                        <tr>
+                            <td>Band 2, S. 115</td>
+                            <td>Informationen zur Haplogruppe R1a</td>
+                            <td><a href="#" target="_blank" rel="noopener noreferrer">Link zur Ressource</a></td>
+                        </tr>
+                        <!-- Weitere Zeilen hier einfügen -->
+                    </tbody>
+                </table>
+
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Wolfgang Pilz, Innsbruck</p>
+        </footer>
+
     </div>
-  </div>
+
 </body>
 </html>
+>
+                <table class="url-table">
+                    <thead>
+                        <tr>
+                            <th>Kapitel/Seite</th>
+                            <th>Beschreibung</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Band 1, S. 25</td>
+                            <td>Archiv Amschelberg, Taufregister</td>
+                            <td><a href="#" target="_blank" rel="noopener noreferrer">Link zum Archiv</a></td>
+                        </tr>
+                        <tr>
+                            <td>Band 2, S. 115</td>
+                            <td>Informationen zur Haplogruppe R1a</td>
+                            <td><a href="#" target="_blank" rel="noopener noreferrer">Link zur Ressource</a></td>
+                        </tr>
+                        <!-- Weitere Zeilen hier einfügen -->
+                    </tbody>
+                </table>
 
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Wolfgang Pilz, Innsbruck</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

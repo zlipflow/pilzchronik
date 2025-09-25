@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pilz-Chronik – Neuigkeiten</title>
+  <meta name="description" content="Neuigkeiten und Aktualisierungen zur Pilz-Chronik (Band 1 & 2).">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;margin:0;color:#111}
+    header,main,footer{max-width:800px;margin:auto;padding:16px}
+    nav a{margin-right:12px;text-decoration:none;color:#0366d6}
+    nav a[aria-current="page"]{font-weight:600}
+    h1{margin:0.6em 0}
+    .note{font-size:.95rem;color:#444;margin:8px 0 16px}
+    .feed{list-style:none;padding:0;margin:0}
+    .feed li{border-top:1px solid #e5e5e5;padding:14px 0}
+    .feed time{font-variant-numeric:tabular-nums;color:#555}
+    .tag{display:inline-block;font-size:.8rem;border:1px solid #ddd;border-radius:999px;padding:2px 8px;margin-left:8px;color:#555}
+    footer{color:#666;font-size:.9rem;border-top:1px solid #eee;margin-top:24px}
+  </style>
+</head>
+<body>
+<header>
+  <nav aria-label="Hauptnavigation">
+    <a href="./index.html">Start</a>
+    <a href="./downloads.html">Downloads</a>
+    <a href="./urls.html">Linkverzeichnis</a>
+    <a href="./news.html" aria-current="page">Neuigkeiten</a>
+    <a href="./kontakt.html">Kontakt</a>
+  </nav>
+  <h1>Neuigkeiten & Aktualisierungen</h1>
+  <p class="note">Kurze Einträge mit Datum und einem Satz. Neueste Einträge stehen oben.</p>
+</header>
+
+<main>
+  <ol class="feed" reversed>
+    <!-- NEUSTER EINTRAG OBEN – einfach kopieren/ergänzen -->
+    <li>
+      <time datetime="2025-09-25">25.09.2025</time>:
+      GitHub-Seite aufgeräumt; neue Seiten <em>Neuigkeiten</em> und <em>Downloads</em> ergänzt.
+      <a href="./downloads.html">Zu den Downloads</a>
+      <span class="tag">Website</span>
+    </li>
+    <li>
+      <time datetime="2025-09-10">10.09.2025</time>:
+      Aktuelle Fassungen <em>Band 1</em> und <em>Band 2</em> festgelegt und hochgeladen.
+      <a href="./downloads.html#baende">Direkt zu den Bänden</a>
+      <span class="tag">PDF</span>
+    </li>
+    <!-- BEISPIEL: 
+    <li>
+      <time datetime="YYYY-MM-DD">DD.MM.YYYY</time>:
+      Kurzer Satz mit Änderung. <a href="./irgendein-link">Optionaler Link</a>
+      <span class="tag">Kategorie</span>
+    </li>
+    -->
+  </ol>
+</main>
+
+<footer>
+  © Pilz-Chronik · Langfristige Spiegel: <a href="https://zenodo.org/" rel="nofollow">Zenodo</a> (Archiv-Hinweis)
+</footer>
+</body>
+</html>

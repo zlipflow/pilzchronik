@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilz-Chronik Online-Archiv</title>
+  <style>
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.6; color: #333; background-color: #fdfdfc;
+      margin: 0; padding: 20px; display: flex; justify-content: center;
+    }
+    .container { max-width: 800px; width: 100%; }
+
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #8B4513;
+      padding-bottom: 20px; margin-bottom: 30px;
+    }
+    .header h1 {
+      font-family: 'Helvetica Neue','Arial',sans-serif;
+      font-size: 2.5em; font-weight: 300; color: #2c3e50; margin: 0;
+    }
+    .header .subtitle { font-size: 1.2em; font-style: italic; color: #7f8c8d; margin-top: 5px; }
+
+    .content-section { margin-bottom: 40px; }
+    .content-section h2 {
+      font-family: 'Helvetica Neue','Arial',sans-serif;
+      font-size: 1.8em; font-weight: 300; color: #8B4513; margin-bottom: 15px;
+    }
+    .content-section p { text-align: justify; margin: 0 0 15px 0; }
+
+    .navigation {
+      width: 100%; background-color: #f8f8f8;
+      border-top: 1px solid #eee; border-bottom: 1px solid #eee;
+      margin-bottom: 30px;
+    }
+    .navigation ul {
+      display: flex; justify-content: center;
+      list-style: none; margin: 0; padding: 0;
+    }
+    .navigation li { margin: 0 15px; }
+    .navigation a {
+      display: block; padding: 12px 15px; text-decoration: none;
+      color: #8B4513; font-family: 'Helvetica Neue','Arial',sans-serif;
+      font-weight: 500; border-bottom: 2px solid transparent;
+      transition: border-color .3s, color .3s;
+    }
+    .navigation a:hover { color: #2c3e50; border-bottom-color: #2c3e50; }
+    .navigation .active a { color: #2c3e50; border-bottom-color: #8B4513; cursor: default; }
+
+    .link-list { list-style: none; padding: 0; }
+    .link-list li { margin-bottom: 15px; }
+    .link-list a {
+      display: flex; align-items: center;
+      text-decoration: none; color: #2c3e50;
+      padding: 10px 15px; border: 1px solid #ecf0f1; border-radius: 5px;
+      transition: background-color .3s, border-color .3s;
+    }
+    .link-list a:hover { background-color: #f9f9f9; border-color: #dcdcdc; }
+    .icon { margin-right: 15px; width: 30px; text-align: center; }
+
+    .footer {
+      text-align: center; font-size: 0.8em; color: #7f8c8d;
+      border-top: 1px solid #ecf0f1; padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Pilz-Chronik</h1>
+      <p class="subtitle">Digitales Archiv &amp; Ergänzungen</p>
+    </header>
+
+    <nav class="navigation">
+      <ul>
+        <li class="active"><a href="index.html">Startseite</a></li>
+        <li><a href="neuigkeiten.html">Neuigkeiten</a></li>
+        <li><a href="downloads.html">Downloads &amp; Archiv</a></li>
+        <li><a href="urls.html">Linkverzeichnis</a></li>
+        <li><a href="kontakt.html">Kontakt &amp; Hinweise</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="content-section">
+        <h2>Willkommen im Online-Archiv</h2>
+        <p>
+          Diese Webseite dient als digitale Erweiterung zur gedruckten „Pilz-Chronik“. 
+          Sie ist die zentrale Anlaufstelle für alle, die tiefer in die Quellen eintauchen, 
+          Korrekturen einsehen oder die Chronik in digitaler Form nutzen möchten.
+        </p>
+        <p>
+          Das Projekt ist als lebendiges Archiv konzipiert und wird bei Bedarf aktualisiert. 
+          Alle hier verfügbaren Materialien sichern die Zugänglichkeit der Forschung für 
+          Familienmitglieder und künftige Generationen von Ahnenforschern.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Downloads &amp; Ressourcen</h2>
+        <ul class="link-list">
+          <li>
+            <a href="downloads.html">
+              <span class="icon">📂</span>
+              <span><strong>Alle Downloads &amp; Archivdateien</strong> — zentrale Übersicht</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      © 2025 Wolfgang Pilz, Innsbruck
+    </footer>
+  </div>
+</body>
+</html>

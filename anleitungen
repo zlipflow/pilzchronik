@@ -1,0 +1,298 @@
+Perfekt — hier sind die zwei neuen Seiten im selben Stil wie deine bestehenden Dateien (Navigation, Typo, Farben). Ich habe die Navigation bereits um Neuigkeiten und Downloads & Archiv ergänzt, analog zu index/urls/kontakt.
+
+⸻
+
+neuigkeiten.html
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilz-Chronik | Neuigkeiten</title>
+  <style>
+    /* --- Grundlegende Stile --- */
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fdfdfc;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container { max-width: 800px; width: 100%; }
+
+    /* --- Kopfbereich --- */
+    .header {
+      text-align: center;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      font-family: 'Helvetica Neue', 'Arial', sans-serif;
+      font-size: 2.5em; font-weight: 300; color: #2c3e50; margin: 0;
+    }
+    .header .subtitle {
+      font-size: 1.2em; font-style: italic; color: #7f8c8d; margin-top: 5px;
+    }
+
+    /* --- Navigation --- */
+    .navigation {
+      width: 100%;
+      background-color: #f8f8f8;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 30px;
+    }
+    .navigation ul {
+      display: flex; justify-content: center;
+      list-style: none; margin: 0; padding: 0;
+    }
+    .navigation li { margin: 0 15px; }
+    .navigation a {
+      display: block; padding: 12px 15px; text-decoration: none;
+      color: #8B4513; font-family: 'Helvetica Neue','Arial',sans-serif;
+      font-weight: 500; border-bottom: 2px solid transparent;
+      transition: border-color .3s, color .3s;
+    }
+    .navigation a:hover { color: #2c3e50; border-bottom-color: #2c3e50; }
+    .navigation .active a { color: #2c3e50; border-bottom-color: #8B4513; cursor: default; }
+
+    /* --- Inhalt --- */
+    .content-section {
+      background-color: #fff; padding: 25px; margin-bottom: 25px;
+      border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+    }
+    h2 {
+      font-family: 'Helvetica Neue','Arial',sans-serif;
+      font-size: 1.5em; color: #8B4513;
+      border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 0;
+    }
+    .news-list { list-style: none; margin: 0; padding: 0; }
+    .news-list li { padding: 10px 0; border-bottom: 1px solid #eee; }
+    .news-date {
+      font-family: 'Helvetica Neue','Arial',sans-serif;
+      font-size: 0.95em; color: #7f8c8d; margin-right: .5em; white-space: nowrap;
+    }
+    .news-text { display: inline; }
+
+    /* --- Fußzeile --- */
+    .footer { text-align: center; margin-top: 40px; font-size: .9em; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Pilz-Chronik</h1>
+      <p class="subtitle">Digitales Archiv &amp; Ergänzungen</p>
+    </header>
+
+    <nav class="navigation">
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li class="active"><a href="neuigkeiten.html">Neuigkeiten</a></li>
+        <li><a href="downloads.html">Downloads &amp; Archiv</a></li>
+        <li><a href="urls.html">Linkverzeichnis</a></li>
+        <li><a href="kontakt.html">Kontakt &amp; Hinweise</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="content-section">
+        <h2>Neuigkeiten / Aktualisierungen</h2>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">25.09.2025:</span>
+            <span class="news-text">Website gestartet und Grundstruktur veröffentlicht.</span>
+          </li>
+          <li>
+            <span class="news-date">10.09.2025:</span>
+            <span class="news-text">Finale Fassungen <em>Band 1</em> und <em>Band 2</em> festgelegt (PDFs hinterlegt).</span>
+          </li>
+          <li>
+            <span class="news-date">06.08.2025:</span>
+            <span class="news-text">Cover-Überarbeitung <em>Band 1</em>.</span>
+          </li>
+        </ul>
+        <!-- Neue Einträge einfach als weiteres <li> hinzufügen -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Wolfgang Pilz, Innsbruck</p>
+    </footer>
+  </div>
+</body>
+</html>
+
+
+⸻
+
+downloads.html
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilz-Chronik | Downloads & Archiv</title>
+  <style>
+    /* --- Grundlegende Stile --- */
+    body {
+      font-family: 'Georgia','Times New Roman',serif;
+      line-height: 1.6; color: #333; background-color: #fdfdfc;
+      margin: 0; padding: 20px; display: flex; justify-content: center;
+    }
+    .container { max-width: 800px; width: 100%; }
+
+    /* --- Kopfbereich --- */
+    .header { text-align: center; padding-bottom: 20px; margin-bottom: 20px; }
+    .header h1 {
+      font-family: 'Helvetica Neue','Arial',sans-serif;
+      font-size: 2.5em; font-weight: 300; color: #2c3e50; margin: 0;
+    }
+    .header .subtitle { font-size: 1.2em; font-style: italic; color: #7f8c8d; margin-top: 5px; }
+
+    /* --- Navigation --- */
+    .navigation {
+      width: 100%; background-color: #f8f8f8;
+      border-top: 1px solid #eee; border-bottom: 1px solid #eee;
+      margin-bottom: 30px;
+    }
+    .navigation ul {
+      display: flex; justify-content: center; list-style: none; margin: 0; padding: 0;
+    }
+    .navigation li { margin: 0 15px; }
+    .navigation a {
+      display: block; padding: 12px 15px; text-decoration: none;
+      color: #8B4513; font-family: 'Helvetica Neue','Arial',sans-serif; font-weight: 500;
+      border-bottom: 2px solid transparent; transition: border-color .3s, color .3s;
+    }
+    .navigation a:hover { color: #2c3e50; border-bottom-color: #2c3e50; }
+    .navigation .active a { color: #2c3e50; border-bottom-color: #8B4513; cursor: default; }
+
+    /* --- Karten/Listen --- */
+    .content-section {
+      background: #fff; padding: 25px; margin-bottom: 25px; border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,.05); border: 1px solid #eee;
+    }
+    h2 {
+      font-family: 'Helvetica Neue','Arial',sans-serif;
+      font-size: 1.5em; color: #8B4513; border-bottom: 1px solid #eee;
+      padding-bottom: 10px; margin-top: 0;
+    }
+    .link-list { list-style: none; padding: 0; margin: 0; }
+    .link-list li { margin-bottom: 12px; }
+    .link-list a {
+      display: flex; align-items: center; text-decoration: none; color: #2c3e50;
+      padding: 10px 15px; border: 1px solid #ecf0f1; border-radius: 5px;
+      transition: background-color .3s, border-color .3s;
+    }
+    .link-list a:hover { background-color: #f9f9f9; border-color: #dcdcdc; }
+    .icon { margin-right: 12px; width: 28px; text-align: center; }
+
+    .note { font-size: .95em; color: #7f8c8d; }
+
+    /* --- Fußzeile --- */
+    .footer { text-align: center; margin-top: 40px; font-size: .9em; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Pilz-Chronik</h1>
+      <p class="subtitle">Digitales Archiv &amp; Ergänzungen</p>
+    </header>
+
+    <nav class="navigation">
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="neuigkeiten.html">Neuigkeiten</a></li>
+        <li class="active"><a href="downloads.html">Downloads &amp; Archiv</a></li>
+        <li><a href="urls.html">Linkverzeichnis</a></li>
+        <li><a href="kontakt.html">Kontakt &amp; Hinweise</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="content-section">
+        <h2>Hauptbände</h2>
+        <ul class="link-list">
+          <li>
+            <a href="Band1.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="icon">📖</span>
+              <span><strong>Band 1: Eine Spurensuche</strong> — PDF (druckoptimiert)</span>
+            </a>
+          </li>
+          <li>
+            <a href="Band2.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="icon">📖</span>
+              <span><strong>Band 2: Ahnentafel &amp; Analysen</strong> — PDF (druckoptimiert)</span>
+            </a>
+          </li>
+        </ul>
+        <p class="note">Hinweis: Die finalen Fassungen per 10.09.2025 sind hier hinterlegt.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Ergänzende Materialien</h2>
+        <ul class="link-list">
+          <li>
+            <a href="Gesamtregister.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="icon">🔎</span>
+              <span><strong>Gesamtregister</strong> (optional als eigenständiges PDF)</span>
+            </a>
+          </li>
+          <li>
+            <a href="Bildliste.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="icon">🖼️</span>
+              <span><strong>Bild-/Abbildungsverzeichnis</strong> (optional)</span>
+            </a>
+          </li>
+          <li>
+            <a href="Transkripte.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="icon">📝</span>
+              <span><strong>Transkripte &amp; Beilagen</strong> (optional)</span>
+            </a>
+          </li>
+        </ul>
+        <p class="note">Wenn eine Datei (z. B. „Gesamtregister.pdf“) noch nicht existiert, kannst du den Link später ergänzen oder vorerst ausblenden.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>Langzeitarchiv (Zenodo)</h2>
+        <ul class="link-list">
+          <li>
+            <a href="https://doi.org/10.5281/zenodo.15828594" target="_blank" rel="noopener noreferrer">
+              <span class="icon">🗄️</span>
+              <span><strong>Zenodo: Digitales Familienarchiv</strong> — DOI-basierte, dauerhafte Ablage</span>
+            </a>
+          </li>
+        </ul>
+        <p class="note">Das Zenodo-Archiv dient der dauerhaften Sicherung aller Materialien (Quellen, Scans, Ergänzungen). Die DOI-Verlinkung sorgt für langfristige Zitierfähigkeit.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Wolfgang Pilz, Innsbruck</p>
+    </footer>
+  </div>
+</body>
+</html>
+
+
+⸻
+
+Damit alles sauber verlinkt ist
+
+Bitte ergänze in deinen bestehenden Seiten die Navigation um die zwei neuen Einträge, falls noch nicht vorhanden:
+
+<li><a href="neuigkeiten.html">Neuigkeiten</a></li>
+<li><a href="downloads.html">Downloads &amp; Archiv</a></li>
+
+(Die aktive Seite erhält jeweils class="active" im <li>.)
+
+Wenn du willst, passe ich dir auf Wunsch auch gleich index.html so an, dass der Abschnitt „Downloads & Ressourcen“ nur noch auf downloads.html verweist (und nicht doppelt pflegt werden muss).
